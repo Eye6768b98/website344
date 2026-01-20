@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me – Butterfly & Brush</title>
+<body>525571230_1490640948773191_4596481436611642901_n (2)<img src="witch.png" class="witch-bg" alt="Witch">
+
+  <style>
+    /* NIGHT SKY BACKGROUND */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0a0f2c, #0b1a3a, #0d234d);
+      margin: 0;
+      padding: 0;
+      color: #e6f7ff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* STAR OVERLAY */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1.5px 1.5px at 70% 20%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1.8px 1.8px at 40% 80%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1.2px 1.2px at 85% 60%, rgba(255,255,255,0.5), transparent);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* MOON */
+    .moon {
+      position: fixed;
+      top: 5%;
+      right: 10%;
+      width: 18vw;
+      filter: brightness(1.4) drop-shadow(0 0 40px rgba(255,255,255,0.6));
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* FOG */
+    .fog {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 150%;
+      height: 40vh;
+      background: url("fog.png") repeat-x;
+      opacity: 0.35;
+      animation: fogMove 35s linear infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes fogMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-40%); }
+    }
+
+    /* FIREFLIES */
+    .firefly {
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      background: radial-gradient(circle, #fff 40%, transparent 60%);
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fly 8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    @keyframes fly {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+      50% { transform: translate(40px, -60px) scale(1.4); opacity: 1; }
+      100% { transform: translate(-20px, 20px) scale(1); opacity: 0.4; }
+    }
+
+    /* BUTTERFLIES */
+    .butterfly {
+      position: fixed;
+      width: 60px;
+      animation: flutter 12s linear infinite;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    @keyframes flutter {
+      0% { transform: translateY(0) translateX(0) rotate(0deg); }
+      25% { transform: translateY(-40px) translateX(30px) rotate(10deg); }
+      50% { transform: translateY(20px) translateX(60px) rotate(-10deg); }
+      75% { transform: translateY(-30px) translateX(30px) rotate(5deg); }
+      100% { transform: translateY(0) translateX(0) rotate(0deg); }
+    }
+
+    /* PAGE CONTENT */
+    h1 {
+      margin-top: 120px;
+      font-size: 48px;
+      color: #D4AF37;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 32px;
+      color: #A8E6A3;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #d9eaff;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background: #A8E6A3;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .home-link:hover {
+      background: #ec09ca;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BACKGROUND ELEMENTS -->
+  <img src="moon.png" class="moon" alt="Moon">
+  <div class="fog"></div>
+
+  <!-- Fireflies -->
+  <div class="firefly" style="top:20%; left:30%; animation-delay:0s;"></div>
+  <div class="firefly" style="top:40%; left:60%; animation-delay:1s;"></div>
+  <div class="firefly" style="top:70%; left:20%; animation-delay:2s;"></div>
+  <div class="firefly" style="top:50%; left:80%; animation-delay:3s;"></div>
+  <div class="firefly" style="top:30%; left:10%; animation-delay:4s;"></div>
+  <div class="firefly" style="top:60%; left:50%; animation-delay:5s;"></div>
+
+  <!-- Butterflies -->
+  <img src="butterfly.png" class="butterfly" style="top:60%; left:10%; animation-delay:0s;">
+  <img src="butterfly.png" class="butterfly" style="top:40%; left:80%; animation-delay:3s;">
+
+  <!-- PAGE CONTENT -->
+  <h1>About Me</h1>
+
+  <p>
+    I’m an artist and photographer who loves capturing magic in everyday moments.  
+    Butterfly & Brush is where my creativity takes flight — blending art, crafts,  
+    and nature‑inspired pieces into work that feels alive and full of wonder.
+  </p>
+
+  <p>
+    I find inspiration in the small things — a flicker of light, a splash of color,  
+    a moment frozen in a photograph. My work is rooted in imagination, transformation,  
+    and the beauty hidden in ordinary moments.
+  </p>
+
+  <!-- ⭐ FUN FACTS SECTION (THIS IS THE CORRECT PLACE) ⭐ -->
+  <h2>Fun Facts About Me</h2>
+
+  <p>✨ I have 22q, which means I see the world in a wonderfully different way.  
+  Colors feel brighter, shapes feel more alive, and tiny details often inspire my art.</p>
+
+  <p>✨ I notice things other people walk past — a shadow, a sparkle, a pattern —  
+  and those little moments often become my favorite creations.</p>
+
+  <p>✨ I love mixing photography with art, turning everyday scenes into something magical.</p>
+
+  <p>✨ Butterflies are my symbol of transformation — they remind me that growth can be beautiful and unexpected.</p>
+
+  <p>✨ I collect textures, colors, and natural shapes to use in my artwork.  
+  Even a leaf or a reflection in a puddle can spark an idea.</p>
+
+  <p>✨ My creativity is my superpower. It helps me express myself in ways words sometimes can’t.</p>
+
+  <a href="index.html" class="home-link">Back to Home</a>
+
+</body>
+</html>
+
+
+
+
+
+
